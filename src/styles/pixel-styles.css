@@ -1,0 +1,67 @@
+/* src/styles/pixel-styles.css */
+/* Пиксельный шрифт */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap&subset=cyrillic,cyrillic-ext');
+
+@font-face {
+  font-family: 'PixelFont';
+  src: url('https://fonts.gstatic.com/s/pressstart2p/v14/e3t4euO8T-267oIAQAu6jDQyK3nVivNm4I81.woff2') format('woff2');
+  font-display: swap;
+}
+
+/* Пиксельные стили */
+.pixel-border {
+  border-style: solid;
+  border-width: 4px;
+  border-color: var(--dark-pink) var(--light-pink) var(--light-pink) var(--dark-pink);
+  image-rendering: pixelated;
+}
+
+.pixel-button {
+  background: var(--dark-pink);
+  border: 3px solid;
+  border-color: var(--white) var(--pixel-shadow) var(--pixel-shadow) var(--white);
+  padding: 12px 24px;
+  font-family: 'PixelFont', 'Courier New', monospace;
+  font-weight: bold;          /* Жирнее */
+  letter-spacing: 1px;        /* Шире */
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.1s;
+}
+
+.pixel-button:hover {
+  border-color: var(--pixel-shadow) var(--white) var(--white) var(--pixel-shadow);
+}
+
+/* Пиксельный текст */
+.pixel-text {
+  color: var(--dark-pink);
+  font-family: 'Press Start 2P', 'Courier New', monospace;
+  text-shadow: 
+    2px 0 0 var(--pixel-shadow),
+    0 2px 0 var(--pixel-shadow),
+    2px 2px 0 var(--pixel-shadow);
+  image-rendering: pixelated;
+  font-smooth: never;
+  -webkit-font-smoothing: none;
+  line-height: 1.2;
+}
+
+/* Пиксельная сетка */
+.pixel-grid {
+  background-image: 
+    linear-gradient(rgba(255, 142, 180, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 142, 180, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Пиксельный блок */
+.pixel-block {
+  background: var(--light-pink);
+  border: 4px solid;
+  border-color: var(--white) var(--dark-pink) var(--dark-pink) var(--white);
+  padding: 20px;
+  margin: 10px 0;
+}
