@@ -10,7 +10,7 @@ const ProjectCard = ({ project }) => {
       display: 'flex',
       flexDirection: 'column'
     }}>
-      {/* Эмодзи и заголовок */}
+  
       <div style={{
         height: '120px',
         background: `linear-gradient(45deg, ${project.color || '#ffcfe0'}, #ff8eb4)`,
@@ -25,7 +25,7 @@ const ProjectCard = ({ project }) => {
         {project.emoji || '🖥️'}
       </div>
       
-      {/* Заголовок проекта */}
+     
       <h3 className="pixel-text" style={{ 
         marginBottom: '10px',
         fontSize: '18px',
@@ -34,7 +34,7 @@ const ProjectCard = ({ project }) => {
         {project.title}
       </h3>
       
-      {/* Описание */}
+     
       <div style={{ flex: 1, marginBottom: '15px' }}>
         <p style={{ 
           fontSize: '14px', 
@@ -45,7 +45,7 @@ const ProjectCard = ({ project }) => {
         </p>
       </div>
       
-      {/* Теги */}
+      
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: '5px', marginBottom: '15px' }}>
         {project.tags.map((tag, index) => (
           <span key={index} style={{
@@ -61,7 +61,7 @@ const ProjectCard = ({ project }) => {
         ))}
       </div>
       
-      {/* Кнопка с ссылкой (если есть) */}
+   
       {project.link && (
         <a 
           href={project.link} 
